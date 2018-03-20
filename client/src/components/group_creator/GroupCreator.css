@@ -1,0 +1,12 @@
+.spaced {
+  padding: 1rem;
+}
+
+.center {
+  display: block;
+  margin: 1rem auto;
+}
+
+.group {
+  margin-top: 1rem;
+}

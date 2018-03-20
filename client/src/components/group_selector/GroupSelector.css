@@ -1,0 +1,20 @@
+.anchor {
+  position: relative;
+}
+
+.button {
+  color: white !important;
+  background-color: #50e3c2;
+  overflow: hidden;
+  max-width: 10rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.button:hover {
+  background-color: #43BDA1 !important;
+}
+
+.ripple {
+  color: white;
+}

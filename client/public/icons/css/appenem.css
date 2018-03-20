@@ -1,0 +1,22 @@
+@font-face {
+  font-family: 'appenem';
+  src: url('../fonts/appenem.eot');
+  src: url('../fonts/appenem.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/appenem.woff') format('woff'),
+       url('../fonts/appenem.ttf') format('truetype'),
+       url('../fonts/appenem.svg#appenem') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+[class*='ae-']:before{
+  display: inline-block;
+  font-family: 'appenem';
+  font-size: 24px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 100%;
+  vertical-align: text-bottom;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.ae-logotype:before{content:'\0041';}

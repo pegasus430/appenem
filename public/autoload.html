@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <script type="text/javascript"
+            src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://rawgit.com/websanova/js-url/v2.5.0/url.min.js"></script>
+  </head>
+  <body>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        var credentials = url('?credentials');
+        if (!credentials) {
+          window.location.replace('/');
+        } else  {
+          try {
+            var parsed = JSON.parse(credentials);
+            localStorage.setItem('credentials', credentials);
+            window.location.replace('/app');
+          } catch(e) {
+            window.location.replace('/');
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

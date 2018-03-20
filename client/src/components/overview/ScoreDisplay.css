@@ -1,0 +1,21 @@
+.caption {
+  font-size: 14px;
+  font-weight: normal;
+  padding: 0 16px;
+  margin-bottom: 0;
+}
+
+.score {
+  font-size: 30px;
+  font-weight: normal;
+  padding: 0 16px;
+  margin-top: 0;
+  margin-bottom: 20px;
+  margin-right: 16px;
+}
+
+.score span {
+  opacity: 0.87;
+  font-size: 18px;
+  margin-left: 2px;
+}

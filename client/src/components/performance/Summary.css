@@ -1,0 +1,45 @@
+.info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tab {
+  flex-grow: 1;
+  padding: 1rem;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  border-bottom: 0.2em solid transparent;
+}
+
+.tab[disabled] {
+  cursor: default;
+}
+
+.tab h1, .tab h2 {
+  margin: 0;
+}
+
+.tab h2 {
+  font-weight: normal;
+  font-size: 1rem;
+}
+
+.tab h1 {
+  font-weight: normal;
+  font-size: 2.7rem;
+}
+
+.tab h1 small {
+  color: var(--color-background);
+  font-size: 1.4rem;
+}
+
+.tab h1 span {
+  font-size: 1rem;
+}
+
+.selected {
+  composes: tab;
+  border-bottom-color: var(--color-primary-contrast);
+}

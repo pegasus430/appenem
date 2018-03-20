@@ -1,0 +1,7 @@
+.styled a {
+  text-decoration: none;
+}
+
+.styled a.active {
+  font-weight: bold;
+}

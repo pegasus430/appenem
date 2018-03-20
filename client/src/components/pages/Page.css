@@ -1,0 +1,7 @@
+.spaced {
+  padding: 1rem;
+}
+
+.spaced > div {
+  margin-bottom: 1rem;
+}

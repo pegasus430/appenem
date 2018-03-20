@@ -1,0 +1,41 @@
+$("#new_user").html("<%= j render 'sign_up_form' %>");
+
+$("#user_schools").select2({
+  language: 'pt-BR',
+  ajax: {
+    url: "/v1/schools/search",
+    dataType: 'json',
+    delay: 250,
+    data: function (params) {
+      return {
+        term: params.term
+      };
+    },
+    processResults: function (data, params) {
+      return {
+        results: $.map(data, function (item) {
+              return {
+                  text: item.name,
+                  id: item.id,
+                  inep_code: item.inep_code
+              };
+          })
+      };
+    },
+    cache: true
+  },
+  minimumInputLength: 1
+});
+
+$("#user_phone").mask("(99) 9999-9999?9").focusout(function (event) {
+  var target, phone, element;
+  target = (event.currentTarget) ? event.currentTarget : event.srcElement;
+  phone = target.value.replace(/\D/g, '');
+  element = $(target);
+  element.unmask();
+  if(phone.length > 10) {
+      element.mask("(99) 99999-999?9");
+  } else {
+      element.mask("(99) 9999-9999?9");
+  }
+});

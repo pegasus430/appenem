@@ -1,0 +1,15 @@
+<%= simple_form_for @user, url: register_origin_url(@origin.name),
+                           method: :post,
+                           remote: true  do |f| %>
+  <%= f.input :name, readonly: true %>
+  <%= f.input :email, readonly: true %>
+  <%= f.input :phone %>
+  <%= f.input :role %>
+  <%= f.input :schools, collection: @user.schools, selected: @user.school %>
+  <%= f.hidden_field :encrypted_payload,
+                     value: @encrypted_payload,
+                     name: :encrypted_payload %>
+  <%= f.submit id: :submit,
+               value: 'Salvar Usuário',
+               data: { disable_with: "Salvando..." } %>
+<% end %>

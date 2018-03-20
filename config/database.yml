@@ -1,0 +1,26 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  pool: 20
+  timeout: 5000
+
+development:
+  <<: *default
+  host: foster.cemfxnd3rpcm.us-east-1.rds.amazonaws.com
+  username: datascience
+  password: somosedu
+  database: appenem
+
+test:
+  <<: *default
+  host: localhost
+  username: root
+  password: root
+  database: appenem_test
+
+production:
+  <<: *default
+  host: foster.cemfxnd3rpcm.us-east-1.rds.amazonaws.com
+  username: datascience
+  password: somosedu
+  database: appenem

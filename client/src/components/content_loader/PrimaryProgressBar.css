@@ -1,0 +1,8 @@
+.circular {
+  display: block;
+  margin: 9rem auto;
+}
+
+.circle {
+  stroke: var(--color-primary);
+}

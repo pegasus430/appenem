@@ -1,0 +1,25 @@
+.header {
+  color: white;
+  display: flex;
+  flex-direction: row;
+}
+
+.headerColumn {
+  width: 50%;
+}
+
+.schoolHeader {
+  composes: headerColumn;
+  background: #4990e2;
+}
+
+.comparisonHeader {
+  composes: headerColumn;
+  background: #50e3c2;
+}
+
+.scores {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}

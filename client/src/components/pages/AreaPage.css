@@ -1,0 +1,36 @@
+.header {
+  background-color: var(--color-accent);
+  color: var(--color-primary-contrast);
+}
+
+.content {
+  padding: 1rem;
+}
+
+.header h1 {
+  font-size: 1.5rem;
+  font-weight: normal;
+  padding: 1rem;
+  margin: 0;
+}
+
+.tabs {
+  display: flex;
+}
+
+.tabs a {
+  display: block;
+  text-align: center;
+  flex-grow: 1;
+  padding: 1rem 0;
+  text-decoration: none;
+  color: var(--color-background);
+  border-bottom: 0.2em solid transparent;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.tabs a.active {
+  color: var(--color-primary-contrast);
+  border-bottom-color: var(--color-primary-contrast);
+}

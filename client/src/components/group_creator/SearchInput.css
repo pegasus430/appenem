@@ -1,0 +1,16 @@
+.input {
+  padding-bottom: 0;
+}
+
+.inputElement {
+  margin-left: 1rem;
+  border-bottom: 0;
+}
+
+.label {
+  margin-left: 1rem;
+}
+
+.bar {
+  border-top: 1px solid var(--color-background);
+}

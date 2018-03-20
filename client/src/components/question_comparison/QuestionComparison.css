@@ -1,0 +1,16 @@
+.line {
+  cursor: pointer;
+}
+
+.content {
+  border-left: 0.2rem solid var(--color-primary);
+}
+
+.content:hover {
+  background: white;
+}
+
+.content img {
+  display: block;
+  margin: 0 auto;
+}

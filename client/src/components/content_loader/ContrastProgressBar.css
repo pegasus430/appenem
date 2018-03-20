@@ -1,0 +1,8 @@
+.circular {
+  display: block;
+  margin: 2rem auto;
+}
+
+.path {
+  stroke: var(--color-primary-contrast);
+}

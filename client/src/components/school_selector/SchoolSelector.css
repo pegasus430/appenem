@@ -1,0 +1,41 @@
+.anchor {
+  position: relative;
+}
+
+.button {
+  color: white !important;
+  overflow: hidden;
+  max-width: 10rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background-color: #4990e2;
+
+}
+
+.button:hover {
+  background-color: #0076FF !important;
+}
+
+.ripple {
+  color: white;
+}
+
+.center {
+  display: block;
+  margin: 0 auto;
+}
+
+.spaced {
+  text-align: center;
+  padding: 1rem;
+}
+
+.search {
+  color: var(--color-background);
+  max-width: 100%;
+}
+
+.available {
+  max-height: 10rem;
+  overflow-y: scroll;
+}

@@ -1,0 +1,16 @@
+.navigation {
+  display: flex;
+  margin-left: auto;
+}
+
+.navigation > div {
+  margin: 0 0.3rem;
+}
+
+.button {
+  color: white !important;
+}
+
+.ripple {
+  color: white;
+}
