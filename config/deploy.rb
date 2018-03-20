@@ -1,6 +1,6 @@
-set :repo_url,        "git@github.com:mkna/ayg.git"
-set :application,     "ayg"
-set :user,            "deploy"
+set :repo_url,        "git@github.com:softcomet/appenem.git"
+set :application,     "appenem"
+set :user,            "ubuntu"
 set :puma_threads,    [4, 16]
 set :puma_workers,    0
 
@@ -16,9 +16,9 @@ set :puma_error_log,  "#{release_path}/log/puma.access.log"
 set :ssh_options,     { forward_agent: true, user: fetch(:user), keys: %w(~/.ssh/id_rsa.pub) }
 set :puma_preload_app, true
 set :puma_worker_timeout, nil
-set :puma_init_active_record, true  # Change to false when not using ActiveRecord
+set :puma_init_active_record, true
 
-set :rvm_ruby_version, "2.2.2@ayg"
+set :rvm_ruby_version, "2.4.2@appenem"
 set :rvm_type, :user
 
 ## Defaults:
