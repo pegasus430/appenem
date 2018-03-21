@@ -58,15 +58,15 @@ end
 # Set the deploy branch to the current branch
 set :branch, current_git_branch
 
-# namespace :assets do
-#   desc "compile assets locally and upload before finalize_update"
-#   task :deploy do
-#     %x[bundle exec rake assets:clean && bundle exec rake assets:precompile]
-#     ENV['COMMAND'] = " mkdir '#{release_path}/public/assets'"
-#     invoke
-#     upload '/#{app_dir}/public/assets', "#{release_path}/public/assets", {:recursive => true}
-#   end
-# end
+namespace :assets do
+  desc "compile assets locally and upload before finalize_update"
+  task :deploy do
+    %x[bundle exec rake assets:clean && bundle exec rake assets:precompile]
+    ENV['COMMAND'] = " mkdir '#{release_path}/public/assets'"
+    invoke
+    upload '/#{app_dir}/public/assets', "#{release_path}/public/assets", {:recursive => true}
+  end
+end
 
 namespace :deploy do
   desc "Make sure local git is in sync with remote."
@@ -96,7 +96,7 @@ namespace :deploy do
   # end
 
   before :starting,     :check_revision
-  # after  :finishing,    :compile_assets
+  after  :finishing,    :compile_assets
   after  :finishing,    :cleanup
   after  :finishing,    :restart
 end
