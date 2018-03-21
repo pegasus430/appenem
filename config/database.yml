@@ -6,7 +6,11 @@ default: &default
 
 development:
   <<: *default
-  host: localhost
+#  host: localhost
+#  username: datascience
+#  password: somosedu
+#  database: appenem
+  host: foster.cemfxnd3rpcm.us-east-1.rds.amazonaws.com
   username: datascience
   password: somosedu
   database: appenem
@@ -20,7 +24,7 @@ test:
 
 production:
   <<: *default
-  host: foster.cemfxnd3rpcm.us-east-1.rds.amazonaws.com
-  username: datascience
-  password: somosedu
+  host: localhost
+  username: root
+  password: root
   database: appenem
